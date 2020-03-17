@@ -1,6 +1,6 @@
 # deviceinfo
 
-A new Flutter plugin.
+A new Flutter plugin which shows the device name and battery level percentage.
 
 ## Getting Started
 
