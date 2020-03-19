@@ -20,18 +20,23 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    initBatteryLevel();
-    initDeviceName();
+    initBatteryLevel();  //function to get the battery level percentage
+    initDeviceName();    //function to get the device name
   }
 
+  // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initDeviceName() async{
     String name;
+    //Platform messages may fail, so we use a PlatformException try/catch
     try{
       name = await Deviceinfo.DeviceName;
     }on PlatformException{
       name = "Failed to get Device Name";
     }
 
+    // If the widget was not removed from the tree while the asynchronous platform
+    // message was in flight, we want to call the setState
+    // to update our existent appearance.
     if(mounted){
       setState(() {
         _deviceName = name;
