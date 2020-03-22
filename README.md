@@ -1,6 +1,21 @@
 # deviceinfo
 
-A new Flutter plugin which shows the device name and battery level percentage.
+A Flutter plugin for iOS and Android that shows the device name and battery level percentage. <br>
+
+## Usage
+
+Import `package:deviceinfo/deviceinfo.dart` and then use the methods directly.
+
+Example:
+```dart
+import 'package:deviceinfo/deviceinfo.dart'
+
+String name = await Deviceinfo.DeviceName;
+print('Device Name : ${name}'); // e.g. "Oneplus 7T"
+
+int battery = await Deviceinfo.BatteryLevel;
+print('Battery Level : ${battery}'); // e.g. "78"
+```
 
 ## Getting Started
 
