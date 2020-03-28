@@ -17,6 +17,8 @@ int battery = await Deviceinfo.BatteryLevel;
 print('Battery Level : ${battery}'); // e.g. "78"
 ```
 
+<img src="https://github.com/vaibhavjain30699/Flutter-Plugin-Example/blob/master/screenshots/Screenshot_20200328-215302.jpg" width="300" />
+
 ## Getting Started
 
 This project is a starting point for a Flutter
